@@ -2,7 +2,7 @@ const createProgressBar = (chartSelector) => {
   const chart = document.querySelector(chartSelector);
 
   const state = new Proxy({
-    value: 1,
+    value: 75,
     isAnimated: false,
     isHidden: false,
   }, {
@@ -22,12 +22,17 @@ const createProgressBar = (chartSelector) => {
   return {
     setValue: (value) => { state.value = value; },
     toggleAnimation: (isEnabled) => { state.isAnimated = isEnabled; },
-    toggleVisibility: (isVisible) => { state.isHidden = !isVisible; }
+    toggleVisibility: (isVisible) => { state.isHidden = !isVisible; },
+    show: () => state.isHidden = false,
+    hide: () => state.isHidden = true,
+    reset: () => { state.value = 0; state.isAnimated = false; state.isHidden = false; },
+    render
   };
 };
 
 const progressApp = () => {
   const progressBar = createProgressBar('.chart');
+  progressBar.render();
 
   const controls = {
     progressValueInput: document.querySelector('#progressValue'),
