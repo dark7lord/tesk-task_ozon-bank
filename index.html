@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Круговая диаграмма</title>
+  <link rel="icon" href="racoon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/index.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="chart"></div>
+    <div class="controls">
+      <div class="input-group">
+        <input class="input-box" type="number" id="progressValue" min="0" max="100" autofocus>
+        <label>Value</label>
+      </div>
+      <div class="input-group">
+        <label class="switch">
+          <input type="checkbox" id="progressAnimate">
+          <span class="slider"></span>
+        </label>
+        <label>Animate</label>
+      </div>
+      <div class="input-group">
+        <label class="switch">
+          <input type="checkbox" id="progressHide">
+          <span class="slider"></span>
+        </label>
+        <label>Hide</label>
+      </div>
+  </div>
+  
+</body>
+</html>

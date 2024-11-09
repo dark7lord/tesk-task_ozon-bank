@@ -1,0 +1,104 @@
+.controls {
+  --input-width: 60px; /* Максимальная ширина для input-box */
+  --input-padding: 8px 16px; /* Паддинг для input-box */
+  --slider-width: 50px; /* Ширина для переключателя */
+  --slider-height: 28px; /* Высота для переключателя */
+  --slider-thumb-size: 20px; /* Размер бегунка для переключателя */
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--input-width, 60px); /* Используем переменную для ширины */
+  box-sizing: border-box;
+  padding: var(--input-padding, 8px 16px); /* Используем переменную для паддинга */
+  border: 2px solid var(--input-border-color, black);
+  border-radius: 18px;
+}
+
+.input-group span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--input-text-color, #333);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: var(--slider-width, 50px); /* Используем переменную для ширины */
+  height: var(--slider-height, 28px); /* Используем переменную для высоты */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--secondary-color, #e6e6e6);
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--slider-thumb-size, 20px); /* Используем переменную для размера бегунка */
+  width: var(--slider-thumb-size, 20px); /* Используем переменную для размера бегунка */
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color, #0066ff);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+input:disabled + .slider {
+  background-color: var(--disabled-color, #e0e0e0);
+}
+
+input:disabled + .slider:before {
+  background-color: var(--disabled-thumb-color, #b3b3b3);
+}
+
+.input-box:focus-visible {
+  outline: 2px solid var(--input-focus-color, #0066ff);
+  outline-offset: 2px;
+}
+
+.switch input:focus-visible + .slider {
+  box-shadow: 0 0 0 2px var(--input-focus-color, #0066ff);
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

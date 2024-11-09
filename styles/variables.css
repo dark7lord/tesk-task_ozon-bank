@@ -1,0 +1,26 @@
+:root {
+  /* Основные цвета */
+  --color-blue: #0066ff; /* Синий цвет */
+  --color-grey-light: #e6e6e6; /* Светлый серый цвет */
+  --color-grey-dark: #333; /* Темно-серый цвет */
+  --color-grey-disabled: #e0e0e0; /* Светлый цвет для выключенного состояния */
+  --color-thumb-disabled: #b3b3b3; /* Цвет бегунка для выключенного состояния */
+  --color-white: #ffffff; /* Белый цвет */
+
+  /* Переменные для применения цветов */
+  --primary-color: var(--color-blue); /* Основной цвет для переключателя и фокуса */
+  --secondary-color: var(--color-grey-light); /* Цвет фона переключателя */
+  --disabled-color: var(--color-grey-disabled); /* Цвет фона переключателя, когда он выключен */
+  --disabled-thumb-color: var(--color-thumb-disabled); /* Цвет бегунка, когда переключатель выключен */
+  --input-border-color: var(--color-grey-dark); /* Цвет рамки для ввода */
+  --input-focus-color: var(--color-blue); /* Цвет для фокуса ввода */
+  --input-text-color: var(--color-grey-dark); /* Цвет текста для меток */
+
+  /* Переменные для прогресс-бара */
+  --progress-bar-bg-color: rgba(234, 240, 246, 1); /* Цвет фона прогресс-бара */
+  --progress-bar-active-color: var(--primary-color); /* Цвет активной части прогресс-бара */
+  --progress-bar-width: 250px; /* Ширина прогресс-бара */
+  --progress-bar-height: 250px; /* Высота прогресс-бара */
+  --progress-bar-padding: 20px; /* Отступы для прогресс-бара */
+  --progress-bar-border-radius: 50%; /* Скругление для круга прогресс-бара */
+}

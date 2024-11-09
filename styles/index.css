@@ -1,0 +1,24 @@
+@import url('variables.css');
+@import url('chart.css');
+@import url('controls.css');
+
+.container {
+  border: 2px dashed blue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+@media (orientation: landscape) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    flex-direction: column;
+  }
+}
