@@ -16,4 +16,4 @@
 
 ## Демо
 
-Пример развернутого проекта доступен по ссылке: [GitHub Pages](https://username.github.io/repo-name)
+Пример развернутого проекта доступен по ссылке: [GitHub Pages](https://dark7lord.github.io/tesk-task_ozon-bank)
